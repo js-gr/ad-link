@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <script type="text/javascript" charset="utf-8" src="https://adm.shinobi.jp/st/na.js"></script>
+    <meta http-equiv="content-type" charset="utf-8">
+    <script>
+var start=new Date();
+  var cnt_val=20;
+  start=Date.parse(start)/1000;
+  function count_down(){
+    var now=new Date();
+    now=Date.parse(now)/1000;
+    var x=parseInt(cnt_val-(now-start),10);
+    if(document.form1){document.form1.c_down.value = x;}
+    if(x>0){
+      timerID=setTimeout("count_down()", 100)
+    }else{
+        var params = (new URL(document.location)).searchParams;
+        var url = params.get('url');
+        location.href= url;
+    }
+  }
+  window.setTimeout('count_down()',100);
+
+    </script>
+    <style>
+      body {
+        height:730px;
+      }
+      .top-banner {
+        width: 770px;
+        height: 90px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #img {
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        width:680px;
+        z-index: 4;
+      }
+        .clear{
+          position:relative;
+		top: -280px;
+		left:620px;
+    z-index: 4;
+        }
+        .ad-row1{
+        margin-left: auto;
+        margin-right: auto;
+        height: 290px;
+        width:680px;
+        z-index: 3;
+        position:relative;
+		top: -20px;
+		left:px;
+        }
+        .ad-row2{
+        margin-left: auto;
+        margin-right: auto;
+        height: 290px;
+        width:680px;
+        z-index: 3;
+        position:relative;
+		top: -20px;
+		left:px;
+        }
+    </style>
+    
+</head>
+<body>
+  <div class="top-banner">
+  <!-- <img src="http://northdelawhere.happeningmag.com/wp-content/uploads/728x90-example-banner.jpg" > -->
+  <!-- admax -->
+<script src="https://adm.shinobi.jp/s/4f803927aa0a723300294e905abcc901"></script>
+<!-- admax -->
+  </div>
+  
+  <script>
+    window.onload = function(){
+    var params = (new URL(document.location)).searchParams;
+    var url = params.get('url');
+    document.getElementById('edit_area').innerHTML = '<img src="https://www.google.com/s2/favicons?domain=' + url + '" width="100">' + url ;
+}
+  </script>
+<FORM NAME="form1">
+<div id="edit_area"></div>
+<script>
+  window.onload = function(){
+    var params = (new URL(document.location)).searchParams;
+    var url = params.get('url');
+    document.getElementById('img').innerHTML = '<img src="https://www.google.com/s2/favicons?domain=' + url + '" width="50px">' + url + '　にリンクします。';
+/*     document.getElementById('link-url').innerHTML = '<h1>' + url + '</h1>' ; */
+    document.getElementById('clear').innerHTML = '<a href="' + url + '">' + '<img src="https://static.wixstatic.com/media/712666_53bce576db8340f0963af347aeb37de3~mv2.png" alt="消す" width="22px" class="clear"></a>' ;
+  }
+</script>
+<div id="img"></div>
+<!-- <div id="link-url"></div> 
+にバツボタンでリンクします（自動的に
+<INPUT TYPE="text" NAME="c_down" SIZE="2" VALUE="5" class=txtstyle> 
+秒経過するとリンクします。） -->
+<!-- <input type="image" src="" alt="消す" onclick="link()" width="50" class="clear"> -->
+</FORM>
+
+<br>
+<div class="ad-row1">
+<!-- <img src="https://wpquads.com/wp-content/uploads/2016/10/Large-rectangle-336x280.png">
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Ad-MediumRectangle-300x250.jpg"> -->
+<script src="https://adm.shinobi.jp/s/8c6a6eef4882cb28aefb431be84aeda5"></script>
+<script src="https://adm.shinobi.jp/s/7b0921f5909ce905539f25360e55112a"></script>
+<div id="clear"></div>
+</div>
+<div class="ad-row2">
+<!-- <img src="https://wpquads.com/wp-content/uploads/2016/10/Large-rectangle-336x280.png">
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Ad-MediumRectangle-300x250.jpg"> -->
+<script src="https://adm.shinobi.jp/s/8c6a6eef4882cb28aefb431be84aeda5"></script>
+<script src="https://adm.shinobi.jp/s/7b0921f5909ce905539f25360e55112a"></script>
+<div class="admax-native" data-admax-id="319a0341cf295107380e72a916edfccc"></div>
+</div>
+
+</html>
